@@ -1,0 +1,30 @@
+body{
+    background-image: url(/img/forget.jpg);
+    margin: inherit;
+    margin-left: 700px;
+    margin-top: 150px;
+    padding: 20px; 
+}
+input{
+    font-family: 'Baloo 2', cursive;
+    font-size: large;
+    border-radius: 10px;
+    background-color: rgb(216, 240, 112);
+}
+label{
+    font-family: 'Aclonica', sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    color: black;
+}
+/* button{
+    font-size: x-large;
+    border-radius: 10px;
+    background-color: rgb(231, 155, 101);
+    margin-left: 200px;
+} */
+.check{
+    font-size: x-large;
+    border-radius: 10px;
+}
+

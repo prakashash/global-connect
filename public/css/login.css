@@ -1,0 +1,41 @@
+div{
+    margin-top: 200px;
+    margin-left: 600px;
+    font-family: 'Orbitron', sans-serif;
+    backdrop-filter: blur(5px);
+    position: absolute;
+}
+.image{
+    background-image: url(/img/login.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box{
+    font-size: x-large;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 10px;
+    padding-left: 25px;
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(205, 229, 248);
+}
+.check{
+    color: black;
+    font-weight: bold;
+}
+a{
+    color: black;
+    font-weight: bold;
+}
+button{
+    font-size: x-large;
+    background-color: rgb(180, 241, 208);
+    border-radius: 10px;
+}
+.cust{
+    position: absolute;
+    margin-right: 10px;
+    background-color: rgb(207, 201, 236);
+}
+
