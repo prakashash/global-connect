@@ -1,4 +1,4 @@
-require ('./global-connect/mongoose');
+require ('./db/mongoose');
 
 const express = require ("express");
 const path = require ("path");
