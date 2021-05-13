@@ -1,17 +1,39 @@
+const service = require ('./state.service');
+
 const getState = (req,res) =>{
-    res.status(200).send("GET State")
+    service.getState(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveState = (req,res) =>{
-    res.status(200).send("POST State")
+    service.saveState(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateState = (req,res) =>{
-    res.status(200).send("UPDATE State")
+    service.updateState(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteState = (req,res) =>{
-    res.status(200).send("DELETE State")
+    service.deleteState(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

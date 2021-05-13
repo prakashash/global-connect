@@ -1,17 +1,39 @@
+const service = require ('./cart.service');
+
 const getCart = (req,res) =>{
-    res.status(200).send("GET Cart")
+    service.getCart(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveCart = (req,res) =>{
-    res.status(200).send("POST Cart")
+    service.saveCart(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateCart = (req,res) =>{
-    res.status(200).send("UPDATE Cart")
+    service.updateCart(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteCart = (req,res) =>{
-    res.status(200).send("DELETE Cart")
+    service.deleteCart(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

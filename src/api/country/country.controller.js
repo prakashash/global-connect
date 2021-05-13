@@ -1,17 +1,39 @@
+const service = require ('./country.service');
+
 const getCountry = (req,res) =>{
-    res.status(200).send("GET Country")
+    service.getCountry(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveCountry = (req,res) =>{
-    res.status(200).send("POST Country")
+    service.saveCountry(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateCountry = (req,res) =>{
-    res.status(200).send("UPDATE Country")
+    service.updateCountry(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteCountry = (req,res) =>{
-    res.status(200).send("DELETE Country")
+    service.deleteCountry(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

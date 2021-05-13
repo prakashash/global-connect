@@ -1,17 +1,39 @@
+const service = require ('./ad.service');
+
 const getAd = (req,res) =>{
-    res.status(200).send("GET AD")
+    service.getAd(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveAd = (req,res) =>{
-    res.status(200).send("POST AD")
+    service.saveAd(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateAd = (req,res) =>{
-    res.status(200).send("UPDATE AD")
+    service.updateAd(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteAd = (req,res) =>{
-    res.status(200).send("DELETE AD")
+    service.deleteAd(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

@@ -1,17 +1,39 @@
+const service = require ('./category.service');
+
 const getCategory = (req,res) =>{
-    res.status(200).send("GET Category")
+    service.getCategory(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveCategory = (req,res) =>{
-    res.status(200).send("POST Category")
+    service.saveCategory(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateCategory = (req,res) =>{
-    res.status(200).send("UPDATE Category")
+    service.updateCategory(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteCategory = (req,res) =>{
-    res.status(200).send("DELETE Category")
+    service.deleteCategory(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

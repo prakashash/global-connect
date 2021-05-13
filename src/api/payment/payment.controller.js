@@ -1,17 +1,39 @@
+const service = require ('./payment.service');
+
 const getPayment = (req,res) =>{
-    res.status(200).send("GET Payment")
+    service.getPayment(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const savePayment = (req,res) =>{
-    res.status(200).send("POST Payment")
+    service.savePayment(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updatePayment = (req,res) =>{
-    res.status(200).send("UPDATE Payment")
+    service.updatePayment(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deletePayment = (req,res) =>{
-    res.status(200).send("DELETE Payment")
+    service.deletePayment(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

@@ -1,17 +1,39 @@
+const service = require ('./vendor.service');
+
 const getVendor = (req,res) =>{
-    res.status(200).send("GET Vendor")
+    service.getVendor(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveVendor = (req,res) =>{
-    res.status(200).send("POST Vendor")
+    service.saveVendor(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateVendor = (req,res) =>{
-    res.status(200).send("UPDATE Vendor")
+    service.updateVendor(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteVendor = (req,res) =>{
-    res.status(200).send("DELETE Vendor")
+    service.deleteVendor(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

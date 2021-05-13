@@ -1,17 +1,39 @@
+const service = require ('./admin.service');
+
 const getAdmin = (req,res) =>{
-    res.status(200).send("GET Admin")
+    service.getAdmin(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveAdmin = (req,res) =>{
-    res.status(200).send("POST Admin")
+    service.saveAdmin(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateAdmin = (req,res) =>{
-    res.status(200).send("UPDATE Admin")
+    service.updateAdmin(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteAdmin = (req,res) =>{
-    res.status(200).send("DELETE Admin")
+    service.deleteAdmin(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

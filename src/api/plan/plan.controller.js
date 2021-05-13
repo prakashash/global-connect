@@ -1,17 +1,39 @@
+const service = require ('./plan.service');
+
 const getPlan = (req,res) =>{
-    res.status(200).send("GET Plan")
+    service.getPlan(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const savePlan = (req,res) =>{
-    res.status(200).send("POST Plan")
+    service.savePlan(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updatePlan = (req,res) =>{
-    res.status(200).send("UPDATE Plan")
+    service.updatePlan(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deletePlan = (req,res) =>{
-    res.status(200).send("DELETE Plan")
+    service.deletePlan(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

@@ -1,17 +1,39 @@
+const service = require ('./wishlist.service');
+
 const getWishlist = (req,res) =>{
-    res.status(200).send("GET Wishlist")
+    service.getWishlist(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveWishlist = (req,res) =>{
-    res.status(200).send("POST Wishlist")
+    service.saveWishlist(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateWishlist = (req,res) =>{
-    res.status(200).send("UPDATE Wishlist")
+    service.updateWishlist(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteWishlist = (req,res) =>{
-    res.status(200).send("DELETE Wishlist")
+    service.deleteWishlist(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

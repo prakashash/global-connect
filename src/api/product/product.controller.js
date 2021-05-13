@@ -1,17 +1,39 @@
+const service = require ('./product.service');
+
 const getProduct = (req,res) =>{
-    res.status(200).send("GET Product")
+    service.getProduct(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveProduct = (req,res) =>{
-    res.status(200).send("POST Product")
+    service.saveProduct(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateProduct = (req,res) =>{
-    res.status(200).send("UPDATE Product")
+    service.updateProduct(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteProduct = (req,res) =>{
-    res.status(200).send("DELETE Product")
+    service.deleteProduct(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

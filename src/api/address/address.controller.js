@@ -1,17 +1,39 @@
+const service = require ('./address.service');
+
 const getAddress = (req,res) =>{
-    res.status(200).send("GET Address")
+    service.getAddress(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveAddress = (req,res) =>{
-    res.status(200).send("POST Address")
+    service.saveAddress(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateAddress = (req,res) =>{
-    res.status(200).send("UPDATE Address")
+    service.updateAddress(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteAddress = (req,res) =>{
-    res.status(200).send("DELETE Address")
+    service.deleteAddress(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {

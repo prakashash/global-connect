@@ -1,17 +1,39 @@
+const service = require ('./review.service');
+
 const getReview = (req,res) =>{
-    res.status(200).send("GET Review")
+    service.getReview(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const saveReview = (req,res) =>{
-    res.status(200).send("POST Review")
+    service.saveReview(req).then((result)=>{
+        res.status(200).send(result);
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const updateReview = (req,res) =>{
-    res.status(200).send("UPDATE Review")
+    service.updateReview(req).then((result)=>{
+        res.status(200).send("Updated");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 const deleteReview = (req,res) =>{
-    res.status(200).send("DELETE Review")
+    service.deleteReview(req).then((result)=>{
+        res.status(200).send("Deleted");
+    }).catch((err)=>{
+        res.status(500).send(err);
+
+    })
 }
 
 module.exports = {
