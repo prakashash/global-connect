@@ -1,4 +1,4 @@
-const Ad = require('../../models/state');
+const State = require('../../models/state');
 
 const getState = (req)=>{
     try{

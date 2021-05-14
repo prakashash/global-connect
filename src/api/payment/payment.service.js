@@ -1,4 +1,4 @@
-const Ad = require('../../models/payment');
+const Payment = require('../../models/payment');
 
 const getPayment = (req)=>{
     try{

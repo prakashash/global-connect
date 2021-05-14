@@ -4,7 +4,7 @@ const controller = require('./ad.controller');
 
 router.get('/', controller.getAd);
 router.post('/', controller.saveAd);
-router.put('/', controller.updateAd);
-router.delete('/', controller.deleteAd);
+router.put('/:id', controller.updateAd);
+router.delete('/:id', controller.deleteAd);
 
 module.exports = router;

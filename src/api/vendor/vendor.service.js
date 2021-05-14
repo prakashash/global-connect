@@ -1,4 +1,4 @@
-const Ad = require('../../models/vendor');
+const Vendor = require('../../models/vendor');
 
 const getVendor = (req)=>{
     try{

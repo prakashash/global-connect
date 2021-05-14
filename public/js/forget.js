@@ -2,21 +2,17 @@ $(document).ready(function () {
     $('#checkclk').on('click', function () {
         if ($(this).is(":checked")) {
             $('#passWord1').attr('type', 'text');
-        } else {
-            $('#passWord2').attr('type', 'password');
-        }
-    })
-
-
-    $('#checkclk').on('click', function () {
-        if ($(this).is(":checked")) {
             $('#passWord2').attr('type', 'text');
+
         } else {
+            $('#passWord1').attr('type', 'password');
             $('#passWord2').attr('type', 'password');
+
         }
     })
 
     $('#btnclk').click(function () {
+
         var pswd1 = $('#passWord1').val();
         var pswd2 = $('#passWord2').val();
 

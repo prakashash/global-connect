@@ -1,4 +1,4 @@
-const Ad = require('../../models/cart');
+const Cart = require('../../models/cart');
 
 const getCart = (req)=>{
     try{

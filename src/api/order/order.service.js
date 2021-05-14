@@ -1,4 +1,4 @@
-const Ad = require('../../models/order');
+const Order = require('../../models/order');
 
 const getOrder = (req)=>{
     try{

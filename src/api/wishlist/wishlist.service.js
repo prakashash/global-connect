@@ -1,4 +1,4 @@
-const Ad = require('../../models/wishlist');
+const Wishlist = require('../../models/wishlist');
 
 const getWishlist = (req)=>{
     try{

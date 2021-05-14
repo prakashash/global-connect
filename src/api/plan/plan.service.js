@@ -1,4 +1,4 @@
-const Ad = require('../../models/plan');
+const Plan = require('../../models/plan');
 
 const getPlan = (req)=>{
     try{

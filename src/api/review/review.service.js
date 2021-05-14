@@ -1,4 +1,4 @@
-const Ad = require('../../models/review');
+const Review = require('../../models/review');
 
 const getReview = (req)=>{
     try{

@@ -1,16 +1,16 @@
-const Ad = require('../../models/address');
+const Address = require('../../models/address');
 
-const getAddress = (req)=>{
+const getAddress = (req,res)=>{
     try{
         return Address.find(req.query)
     }catch(err){
-        throw Error(err)
+        throw new Error(err)
     }
 };
 
 const saveAddress = (req)=>{
     try{
-        var ad = new Address(req.body)
+        var address = new Address(req.body)
         return address.save()
     }catch(err){
         throw new Error(err)

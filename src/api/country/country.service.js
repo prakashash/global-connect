@@ -1,4 +1,4 @@
-const Ad = require('../../models/country');
+const Country = require('../../models/country');
 
 const getCountry = (req)=>{
     try{

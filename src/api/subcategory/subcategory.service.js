@@ -1,4 +1,4 @@
-const Ad = require('../../models/subcategory');
+const Subcategory = require('../../models/subcategory');
 
 const getSubcategory = (req)=>{
     try{

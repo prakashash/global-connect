@@ -4,7 +4,7 @@ const controller = require('./address.controller');
 
 router.get('/', controller.getAddress);
 router.post('/', controller.saveAddress);
-router.put('/', controller.updateAddress);
-router.delete('/', controller.deleteAddress);
+router.put('/:id', controller.updateAddress);
+router.delete('/:id', controller.deleteAddress);
 
 module.exports = router;

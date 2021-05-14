@@ -1,4 +1,4 @@
-const Ad = require('../../models/user');
+const User = require('../../models/user');
 
 const getUser = (req)=>{
     try{
