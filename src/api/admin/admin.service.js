@@ -10,7 +10,7 @@ const getAdmin = (req)=>{
 
 const saveAdmin = (req)=>{
     try{
-        var ad = new Admin(req.body)
+        var admin = new Admin(req.body)
         return admin.save()
     }catch(err){
         throw new Error(err)

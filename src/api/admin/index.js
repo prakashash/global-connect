@@ -4,7 +4,7 @@ const controller = require('./admin.controller');
 
 router.get('/', controller.getAdmin);
 router.post('/', controller.saveAdmin);
-router.put('/', controller.updateAdmin);
-router.delete('/', controller.deleteAdmin);
+router.put('/:id', controller.updateAdmin);
+router.delete('/:id', controller.deleteAdmin);
 
 module.exports = router;

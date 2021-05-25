@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 const routes = require ('./routes')
 
+const Adminservice = require('./api/admin/admin.service')
+const Userservice = require('./api/user/user.service')
+
 
 const User = require ('./models/user');
 const Vendor = require ('./models/vendor');
@@ -57,17 +60,33 @@ app.get('/register',(req,res)=>{
     res.render("register")
 })
 
-app.get('/admin',(req,res)=>{
-    res.render("admin")
-})
-
-app.get('/test',(req,res)=>{
-    res.render("test")
-})
-
 app.get('/admin/add',(req,res)=>{
-    res.render("add")
+    res.render("addAdmin")
 })
+
+app.get('/admin', (req, res) => {
+
+    Adminservice.getAdmin(req).then((adminArr) => {
+        res.render('admin', {
+            title: 'Admin page',
+            adminArr: adminArr
+        })
+    }).catch((err) => {
+        res.status(500).send('Unable to render page')
+
+    })
+})
+
+app.get('/admin/add', (req, res) => {
+    AdminService.getAdmin(req).then((admin) => {
+        res.render('addAdmin', {
+            admin: admin
+        })
+    })
+
+})
+
+
 
 // app.get('*', (req, res) => {
 //     res.render("404")

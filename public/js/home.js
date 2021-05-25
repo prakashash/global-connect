@@ -5,6 +5,8 @@ $(document).ready(function(){
     })
     $('#sideAdmin').click(function(){
         window.location.href = 'http://localhost:2000/admin'
-
+    })
+    $('.logout').click(function(){
+        window.location.href = 'http://localhost:2000'
     })
 })

@@ -60,6 +60,7 @@ button{
     background-color: black;
     color: red;
     font-family: 'Zen Dots', cursive;
+    text-align: center;
 }
 .header{
     background-color: black;
@@ -71,40 +72,28 @@ p{
     font-style: italic;
 }
 input{
-    margin-left: 300px;
-    margin-top: 50px;
+
     font-size: xx-large;
-    color: red;
-    background-color: black;
+    color: rgb(226, 181, 181);
+    background-color: rgb(49, 45, 45);
     border-radius: 10px;
     border-color: white;
+    font-family: 'Zen Dots', cursive;
+    margin-left: 290px;
+    margin-top: 50px;
+}
+label{
+    margin-top: 50px;
+    margin-left: 300px;
+    color: black;
+    font-family: 'Zen Dots', cursive;
+    font-size: xx-large;
+    padding-right: 40px;
 }
 input:hover{
     background-color: red;
     color: black;
 }
-.admintable{
-    margin-left: 400px;
-    margin-top: 100px;
-    margin-right: 250px;
-    background-color: rgba(63, 56, 56, 0.849);
-
+.submitbtn{
+    margin-left: 470px;
 }
-
-th{
-    font-family: 'Zen Dots', cursive;
-    padding-left: 40px;
-    font-size: xx-large;
-    color: black;
-
-
-}
-
-td{
-    font-family: 'Zen Dots', cursive;
-    padding-left: 40px;
-    font-size: large;
-    color: yellow;
-
-}
-
